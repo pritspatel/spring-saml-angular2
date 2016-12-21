@@ -23,8 +23,16 @@ Angular 2 Final(2.2.3 Release)
 
 ## How to Run
 
->   run mvn clean install
+>   run ```mvn clean install```
 
 >   This should generate war file
 
 >   Deploy generated war to any servlet container like tomcat 8.0.39
+
+
+## How to access SP metadata
+
+use this address
+
+```http://host:port/samlapp/saml/metadata```
+
