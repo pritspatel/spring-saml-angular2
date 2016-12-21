@@ -237,8 +237,13 @@
 	</bean>
 
 	<!-- Provider of default SAML Context -->
+	<!-- remove the property if you want to send and receive SAML request/response over HTTPS -->
 	<bean id="contextProvider"
-		class="org.springframework.security.saml.context.SAMLContextProviderImpl" />
+		class="org.springframework.security.saml.context.SAMLContextProviderImpl" >
+		<property name="storageFactory">
+			<bean class="org.springframework.security.saml.storage.EmptyStorageFactory"/>
+		</property>
+	</bean>
 
 	<!-- Processing filter for WebSSO profile messages -->
 	<bean id="samlWebSSOProcessingFilter" class="org.springframework.security.saml.SAMLProcessingFilter">
