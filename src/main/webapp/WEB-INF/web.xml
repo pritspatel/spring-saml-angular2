@@ -29,6 +29,11 @@
         <url-pattern>/saml/web/*</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>saml</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
